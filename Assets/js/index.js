@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    //initialisation Js for waiting HTML is done
+
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slide'); //TABLE SLIDE
     const dots = document.querySelectorAll('.slider-dot'); //TABLE DOTS
@@ -66,7 +68,7 @@ if (burgerBtn && closeBtn && menuBurger) {
 document.getElementById('backToTop').addEventListener('click', function () {
     const start = window.scrollY; //first position begenning in px
     const end = 0; //position in px
-    const duration = 1000; // duration animation in ms (2s here)
+    const duration = 2500; // duration animation in ms (2s here)
     const distance = start - end; //distance to do in px to start to end with soustraction
     let startTime = null; //time distance for beginning
 

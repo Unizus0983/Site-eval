@@ -403,15 +403,24 @@
         </div>
         <form action="#" method="post" class="contact-form" id="form">
             <div class="form-row">
+
                 <input type="text" name="prenom" placeholder="Prénom*" required />
                 <input type="text" name="nom" placeholder="Nom*" required />
             </div>
 
             <input type="email" name="email" placeholder="Email*" required />
 
-            <input type="text" name="objet" placeholder="Objet de la demande*" required />
+            <select name="objet" required>
+                <option value="">--Objet de votre demande*--</option>
+                <option value="Portrait">Portrait</option>
+                <option value="Portrait Corporate">Portrait Corporate</option>
+                <option value="Mariage">Mariage</option>
+                <option value="Devis">Devis</option>
+                <option value="Autre">Autre</option>
 
-            <input type="date" name="event_date" required />
+            </select>
+            <label for="prenom">Date de l'évènement</label>
+            <input type="date" name="event_date" />
 
             <textarea name="message" placeholder="Votre message*" rows="5" required></textarea>
 
@@ -421,9 +430,9 @@
 
     </section>
     <div class="google-map">
-        <div class="iframe-container"> <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.010394054824!2d-2.4372225879996194!3d48.571349720743875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480e0d2af0418ba1%3A0x437675b382cd7f31!2s13%20Rue%20de%20la%20Fontaine%2C%2022240%20La%20Bouillie!5e0!3m2!1sfr!2sfr!4v1754647874326!5m2!1sfr!2sfr"
-                width="990" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        <div class="iframe-container"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.620863237251!2d1.9746709123190804!3d50.87521837155832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dc442dfac6fc17%3A0x894c030c3b974a5d!2s594%20Av.%20du%20Rossignol%2C%2062610%20Ardres!5e0!3m2!1sfr!2sfr!4v1754735433080!5m2!1sfr!2sfr"
+                width="600" height="300" style="border:0;" allow="fullscreen" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
     </div>
@@ -465,7 +474,7 @@
                 <div class="footer__col">
                     <h3 class="footer-title">Contact</h3>
                     <address class="footer-address">
-                        <p><i class="fas fa-map-marker-alt"></i> 13 rue de la fontaine</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 594 av du rossignol Ardes</p>
                         <p><i class="fas fa-phone"></i> <a href="tel:+33123456789">06 84 78 35 52</a></p>
                         <p><i class="fas fa-envelope"></i> <a
                                 href="mailto:contact@exemple.com">unizus.photographie@outlook.fr</a>

@@ -32,6 +32,7 @@ html {
 body {
     background-color: var(--white-medium);
     margin-top: 90px;
+    position: relative;
 }
 header {
     max-height: 421px;
@@ -93,7 +94,34 @@ h5 {
     background-color: var(--gold);
     color: var(--black);
 }
+/* button srcoll page */
+#backToTop i {
+    font-size: 1.2rem;
+    color: var(--white);
+}
 
+#backToTop {
+    width: var(--padM);
+    height: var(--padM);
+    padding: 1.2rem;
+    color: var(--grey);
+    background-color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+#backToTop:hover {
+    opacity: 1;
+}
+/* buttons end */
 .container {
     max-width: var(--container);
     padding: 30px;
@@ -701,9 +729,9 @@ p .normal {
 }
 .iframe-container {
     position: relative;
-    width: 100%;
+    width: 60%;
     padding-bottom: 56.25%; /* Ratio 16:9 - ajustez selon  besoins */
-    height: 0;
+    height: auto;
     overflow: hidden;
     border: 1px solid var(--gold);
     margin-bottom: var(--padM);

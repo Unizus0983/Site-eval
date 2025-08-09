@@ -25,7 +25,22 @@
 <body>
 
     <header class="header-container">
-        <!-- menus -->
+        <!-- PLACE FOR NODAL ADMIN CONNEXION -->
+
+        <!-- BOUTON DE SCROLL SMOOTH POUR REMONTER LA PAGE  -->
+        <div class="btnScroll" id="backToTop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- MENUS *2 -->
         <div class="container-nav">
             <div class="container-logo">
                 <div id="img-logo">
@@ -34,7 +49,7 @@
 
                     <img class="burger-bar" src="./Assets/images/burger-bar.png" alt="menu burger">
                 </div>
-                <!-- menu mobile -->
+                <!-- MENU PHONE -->
                 <nav class="menu-burger">
                     <img src="./Assets/images/close.png" alt="cross" class="close">
                     <ul class="nav-mobile">
@@ -60,7 +75,7 @@
                         </li>
                         <li><a class=" link-nav" href="#">Admin</a>
                         </li>
-                        <li><a class=" link-nav" href="#">contact</a></li>
+                        <li><a class=" link-nav" href="#contactUs">contact</a></li>
                         <li><a href="https://mariage-unizus.fr/photos-galerie/" class="link-nav reflex"
                                 target="_blank"><img src="./Assets/images/camera.png" alt="boitier reflex"></a></li>
                     </ul>
@@ -89,7 +104,7 @@
                     </li>
                     <li><a class=" link-nav" href="#">Admin</a>
                     </li>
-                    <li><a class=" link-nav" href="#">contact</a></li>
+                    <li><a class=" link-nav" href="#contactUs">contact</a></li>
                     <li>
                         <a href="https://mariage-unizus.fr/photos-galerie/" class="link-nav reflex" target="_blank">
                             <img src="./Assets/images/camera.png" alt="boitier reflex">
@@ -114,6 +129,7 @@
     <!-- fin header -->
     <section class="services">
         <div class="slider-container">
+            //SLIDE COULISSANT
             <div class="slider-track">
                 <div class="slide active">
                     <img src="./Assets/images/Portrait-femme-Bretagne-22_20.JPG" loading="lazy"
@@ -152,6 +168,7 @@
                     </div>
                 </div>
             </div>
+            <!-- BUTTONS VISIBLE FOR SLIDER -->
             <div class="slider-nav">
                 <div class="slider-dot active"></div>
                 <div class="slider-dot"></div>
@@ -367,7 +384,7 @@
         </div>
 
     </section>
-    <section class="contact container">
+    <section class="contact container" id="contactUs">
 
         <div class="contact-describe">
             <h4 class="under">contact</h4>
@@ -422,8 +439,8 @@
                     <h3 class="footer__title">Explorer</h3>
                     <nav>
                         <ul class="footer__nav">
-                            <li><a href="/mentions.html" class="footer__link" target="_blank">Mentions légales</a></li>
-                            <li><a href="/droits-auteurs.html" class="footer__link" target="_blank">Droits d'auteurs</a>
+                            <li><a href="mentions.html" class="footer__link" target="_blank">Mentions légales</a></li>
+                            <li><a href="droits-auteurs.html" class="footer__link" target="_blank">Droits d'auteurs</a>
                             </li>
                             <li><a href="https://mariage-unizus.fr/photos-galerie/" class="footer__link"
                                     target="_blank">Portfolio</a></li>

@@ -1,0 +1,31 @@
+CREATE TABLE visiteurs (
+    id_visiteur INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    objet_demande VARCHAR(100) NOT NULL,
+    date_evenement DATE,
+    message TEXT,
+    date_soumission DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE admins (
+    id_admin INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    role ENUM('superadmin','admin') DEFAULT 'admin',
+    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
+    derniere_connexion DATETIME
+);
+
+CREATE TABLE documents (
+    id_document INT PRIMARY KEY AUTO_INCREMENT,
+    id_admin INT NOT NULL,
+    nom_fichier VARCHAR(255) NOT NULL,
+    type_fichier ENUM('pdf','jpg','webp') NOT NULL,
+    taille_ko INT CHECK (taille_ko <= 350 OR type_fichier = 'pdf'),
+    chemin_fichier VARCHAR(500) NOT NULL,
+    date_upload DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_admin) REFERENCES admins(id_admin)
+);
